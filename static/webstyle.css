@@ -1,5 +1,19 @@
 body {
-    background-color: bisque
+    background-color: bisque;
+    padding: 30px;
 }
 
+.quote {
+    font-size: small;
+    font-style: italic;
+}
 
+.sitelinks {
+    width: 1000px;
+    overflow-wrap: break-word;
+}
+
+li {
+    display: inline;
+    padding: 30px;
+}

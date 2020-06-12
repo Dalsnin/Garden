@@ -1,39 +1,15 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="da">
+{% block body %}
+    <h1>Om mig og haven</h1>
+    <p>
+        I haven dyrker vi en masse forskellige frugt og grønt:
+        <ul>
+            <li>Kartofler</li>
+            <li>Tomater</li>
+            <li>Gulerødder</li>
+            <li>Løg</li>
+        </ul>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Om mig og haven</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="webstyle.css">
-
-    </head>
-
-    <body>
-        <a href="index.html">Indeks</a>
-        <br></br>
-        <a href="pictures.html">Billedgalleri</a>
-        <br></br>
-        <a href="about.html">Om mig og haven</a>
-        <br></br>
-        <a href="overview.html">Oversigt over indhold på siden</a>
-
-
-        <h1>Om mig og haven</h1>
-        <p>
-            I haven dyrker vi en masse forskellige frugt og grønt:
-            <ul>
-                <li>Kartofler</li>
-                <li>Tomater</li>
-                <li>Gulerødder</li>
-                <li>Løg</li>
-            </ul>
-
-        </p>
-
-
-
-    </body>
-
-</html>
+    </p>
+{% endblock %}

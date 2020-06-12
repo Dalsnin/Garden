@@ -4,3 +4,5 @@ garden.code-workspace
 /venv/
 /images/
 README.md
+/offline_executions/
+/venv_garden/
