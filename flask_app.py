@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template
 
-from databases import get_blogposts
+from backend import get_blogposts
 
 app = Flask(__name__)
 

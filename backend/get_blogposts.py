@@ -5,9 +5,9 @@ from markupsafe import Markup
 def get_blogposts():
     def get_data_from_sql():
         try:
-            connection = sqlite3.connect('databases/blogposts.db')
+            connection = sqlite3.connect('backend/blogposts.db')
         except:          
-            connection = sqlite3.connect('/home/Dalsnin/mysite/databases/blogposts.db')
+            connection = sqlite3.connect('/home/Dalsnin/mysite/backend/blogposts.db')
         cursor = connection.cursor()   
  
         cursor.execute('''SELECT * from blogposts ORDER BY publish_priority DESC''')
@@ -26,14 +26,6 @@ def get_blogposts():
         connection.close()
 
 
-
-    def insert_html_markup(text):
-
-
-
-        return text
-
-
     def insert_images_markup(text):
         # {{}} designates file names.
         # {} designates picture quote
@@ -47,17 +39,16 @@ def get_blogposts():
         text = text.replace("{{", '<div class="quote">')
         text = text.replace("}}", '</div>')
         text = text.replace("{", '<img src="static/images/')
-        text = text.replace("}", '/1600 x 1200.jpg" alt="Smiley face" width="1120" height="840">')
+        text = text.replace("}", '/960 x 720.jpg" alt="Smiley face" width="960" height="720">')
 
         # When a user writes to SQL, a new line is designated \n. In HTML however, a new line is understood as a <p>.
-        text = text.replace('\n\n', '<p>')
+        text = text.replace('\n\n', '</p><p>')
         text = text.replace('\n', '<p>')
         return text
 
 
     blogentries = get_data_from_sql()
     for i in range(len(blogentries)):
-        blogentries[i]['blogpost'] = insert_html_markup(blogentries[i]['blogpost'])
         blogentries[i]['blogpost'] = insert_images_markup(blogentries[i]['blogpost'])
         blogentries[i]['blogpost'] = Markup(blogentries[i]['blogpost'])
 

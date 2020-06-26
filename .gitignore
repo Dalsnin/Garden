@@ -1,9 +1,8 @@
-/.vscode/
-/__pycache__/
-garden.code-workspace
-/venv/
-/images/
+.vscode/
 README.md
-/offline_executions/
+__pycache__/
+garden.code-workspace
+offline/
+/backend/__pycache__
 /venv_garden/
-/static/images/
+/static/images
